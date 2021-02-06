@@ -19,7 +19,7 @@ namespace Ventaxd
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hola mundo");    
+            MessageBox.Show("Atrevete");    
         }
     }
 }
