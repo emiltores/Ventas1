@@ -30,7 +30,7 @@ namespace Win.Lacteo
             usuario = textBox1.Text;
             contraseña = textBox2.Text;
 
-            if (usuario == "admin" && contraseña == "1234" || usuario == "admin1" && contraseña == "123")
+            if (usuario == "admin" && contraseña == "1234" || usuario == "admindd" && contraseña == "123")
             {
                 this.Close();
             }
