@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.IO;
 
 namespace BL.Lacteo
 {
     public class ProductosBL
     {
         public BindingList<Producto> ListaProductos { get; set; }
+
         public ProductosBL()
         {
             ListaProductos = new BindingList<Producto>();
-
             var producto1 = new Producto();
             producto1.Id = 1;
             producto1.Descripcion = "Queso Semiseco";
@@ -57,18 +61,85 @@ namespace BL.Lacteo
             producto5.Activo = true;
 
             ListaProductos.Add(producto5);
+        }
 
+        public object eliminarProducto(string id)
+        {
+            throw new NotImplementedException();
         }
 
         public BindingList<Producto> ObtenerProductos()
         {
-
-
-
-            return ListaProductos;
-
+            return ListaProductos; 
         }
-    }
+
+        public Resultado GuardarProducto(Producto producto)
+        {
+            var resultado = Validar(producto);
+            if (resultado.Exitoso == false)
+            {
+                return resultado;
+            }
+
+            if (producto.Id == 0)
+            {
+                producto.Id = ListaProductos.Max(item => item.Id) + 1;
+            }
+
+            resultado.Exitoso = true;
+       
+            return resultado;
+        }
+
+        public void agregarProducto()
+        {
+            var nuevoProducto = new Producto();
+
+            ListaProductos.Add(nuevoProducto);
+        }
+        public bool eliminarProducto(int id)
+        {
+            foreach (var producto in ListaProductos)
+            {
+                if (producto.Id == id)
+                {
+                    ListaProductos.Remove(producto);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private Resultado Validar(Producto producto)
+        {
+            var resultado = new Resultado();
+            resultado.Exitoso = true;
+
+            if (producto.Descripcion == "")
+            {
+                resultado.Mensaje = "Ingrese una descripción";
+                resultado.Exitoso = false;
+            }
+
+            if (producto.Existencia < 0)
+            {
+                resultado.Mensaje = "La existencia debe ser mayor que cero";
+                resultado.Exitoso = false;
+            }
+
+            if (producto.Precio < 0)
+            {
+                resultado.Mensaje = "El precio debe ser mayor que cero";
+                resultado.Exitoso = false;
+            }
+
+
+            return resultado;
+         
+        }
+     }
+
+
 
     public class Producto
     {
@@ -77,5 +148,12 @@ namespace BL.Lacteo
         public double Precio { get; set; }
         public int Existencia { get; set; }
         public bool Activo { get; set; }
+    }
+
+
+    public class Resultado
+    {
+        public bool Exitoso { get; set; }
+        public string Mensaje { get; set; }
     }
 }
