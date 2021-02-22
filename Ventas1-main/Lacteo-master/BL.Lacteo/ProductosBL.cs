@@ -73,24 +73,6 @@ namespace BL.Lacteo
             return ListaProductos; 
         }
 
-        public Resultado GuardarProducto(Producto producto)
-        {
-            var resultado = Validar(producto);
-            if (resultado.Exitoso == false)
-            {
-                return resultado;
-            }
-
-            if (producto.Id == 0)
-            {
-                producto.Id = ListaProductos.Max(item => item.Id) + 1;
-            }
-
-            resultado.Exitoso = true;
-       
-            return resultado;
-        }
-
         public void agregarProducto()
         {
             var nuevoProducto = new Producto();
@@ -110,12 +92,30 @@ namespace BL.Lacteo
             return false;
         }
 
+        public Resultado GuardarProducto(Producto producto)
+        {
+            var resultado = Validar(producto);
+            if (resultado.Exitoso == false)
+            {
+                return resultado;
+            }
+
+            if (producto.Id == 0)
+            {
+                producto.Id = ListaProductos.Max(item => item.Id) + 1;
+            }
+
+            resultado.Exitoso = true;
+       
+            return resultado;
+        }
+
         private Resultado Validar(Producto producto)
         {
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
-            if (producto.Descripcion == "")
+            if (string.IsNullOrEmpty(producto.Descripcion) == true)
             {
                 resultado.Mensaje = "Ingrese una descripción";
                 resultado.Exitoso = false;
