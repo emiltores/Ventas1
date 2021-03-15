@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VENTAS
+namespace Ventas
 {
     public partial class Form1 : Form
     {
@@ -19,7 +19,7 @@ namespace VENTAS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("TEN FÉ, TODO ESTARÁ BIEN");
+            MessageBox.Show("Lo imposible solo cuesta un poco mas");
         }
     }
 }
