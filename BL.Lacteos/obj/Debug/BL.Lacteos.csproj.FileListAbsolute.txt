@@ -18,3 +18,13 @@ C:\Users\Roberto Torres\Desktop\L1\L3\BL.Lacteos\bin\Debug\EntityFramework.SqlSe
 C:\Users\Roberto Torres\Desktop\L1\L3\BL.Lacteos\obj\Debug\BL.Lacteos.csprojResolveAssemblyReference.cache
 C:\Users\Roberto Torres\Desktop\L1\L3\BL.Lacteos\obj\Debug\BL.Lacteos.dll
 C:\Users\Roberto Torres\Desktop\L1\L3\BL.Lacteos\obj\Debug\BL.Lacteos.pdb
+C:\Users\Roberto Torres\Source\Repos\Ventas1\BL.Lacteos\bin\Debug\BL.Lacteos.dll.config
+C:\Users\Roberto Torres\Source\Repos\Ventas1\BL.Lacteos\bin\Debug\BL.Lacteos.dll
+C:\Users\Roberto Torres\Source\Repos\Ventas1\BL.Lacteos\bin\Debug\BL.Lacteos.pdb
+C:\Users\Roberto Torres\Source\Repos\Ventas1\BL.Lacteos\bin\Debug\EntityFramework.dll
+C:\Users\Roberto Torres\Source\Repos\Ventas1\BL.Lacteos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Roberto Torres\Source\Repos\Ventas1\BL.Lacteos\bin\Debug\EntityFramework.xml
+C:\Users\Roberto Torres\Source\Repos\Ventas1\BL.Lacteos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Roberto Torres\Source\Repos\Ventas1\BL.Lacteos\obj\Debug\BL.Lacteos.csprojResolveAssemblyReference.cache
+C:\Users\Roberto Torres\Source\Repos\Ventas1\BL.Lacteos\obj\Debug\BL.Lacteos.dll
+C:\Users\Roberto Torres\Source\Repos\Ventas1\BL.Lacteos\obj\Debug\BL.Lacteos.pdb
